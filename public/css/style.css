@@ -1,0 +1,332 @@
+body {
+    font-family:    Verdana, Arial, Helvetica, sans-serif;
+    font-size:      10pt;
+    background:     #DDDDDD;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Full site */
+div#wrap {
+    border:         1px solid #666666;
+    position:       relative;
+}
+
+/* Top Bar */
+div.topBar {
+    width:	    	100%;
+    background:	    	#999999;
+    font-weight:	bold;
+    height:		35px;
+    border: 1px solid black;
+}
+
+div.topBarLeft {
+    background:	    	#999999;
+    width:	    	49%;
+    text-align:	    	left;
+    font-size:		14pt;
+    float:		left;
+    height:		25px;
+    padding-top:	5px;
+    margin-left:	5px;
+}
+
+div.topBarRight {
+    background:	    	#999999;
+    width:	    	49%;
+    font-size:		7pt;
+    text-align:	    	left;
+    float:		right;
+    height:		25px;
+    padding-top:	5px;
+}
+
+div.topBarRight a {
+    color: black;
+}
+
+
+/* /Top bar */
+
+/* Header block */
+div.header {
+    margin-top:     15px;
+    margin-bottom:  10px;
+    width:          500px;
+    height:         100px;
+    padding-top:    50px;
+    font-size:      2.5em;
+    margin-left:    auto;
+    margin-right:   auto;
+    text-align:     center;
+    border:         1px solid black;
+    background:     white;
+}
+
+div#contentContainer {
+    margin:         10px 0 0 0;
+    float:          left;
+    width:          100%;
+    min-width:      990px;
+}
+
+/* Center */
+div#mainContentWrap {
+    float:              left;
+    width:              68%; 
+    margin:             0 -97% 0 0;
+    background:         transparent;
+    min-width:          650px;
+}
+
+/* The feeds */
+div.feedBlock {
+    border:             1px solid purple;
+    margin-bottom:      10px;
+    padding-bottom:     4px;
+}
+
+table.feedTable {
+    width:              100%;
+    margin-left:        15px;
+    margin-bottom:      15px;
+    padding-bottom:     10px;
+    background:         white;
+}
+
+table.commentLinkRow {
+    width:              98%;
+    margin-left:        10px;
+    margin-bottom:      15px;
+    padding-bottom:     10px;
+    background:         white;
+}
+
+/* This is the title of the feed, usually a site name */
+td.feedTitle {
+    font-weight:    bold;
+    text-align:     left;
+    padding-top:    3px;
+    padding-bottom: 3px;
+}
+
+td.feedTitle a {
+    color:              white;
+}
+
+/**
+ * Headlines, dates, and comment link
+ */
+/* This is the headline being delivered in the feed */
+tr.linkRow {
+    font-size:      .8em;
+}
+
+
+
+tr.linkRow:hover {
+    background-color:	#EEEEEE;
+}
+
+/* The table cell the date is in shouldn't wrap */
+td.linkTime {
+    white-space:    nowrap;
+    font-size:      .8em;
+    font-weight:    bold;
+    padding:        3px 0 3px 8px;
+}
+
+/* The headline cell */
+td.linkText {
+    width:          80%;
+    padding:        2px 0 2px 16px;
+}
+
+/* The comment link cell */
+td.commentLink {
+    width:          10%;
+    text-align:     center;
+    vertical-align: middle;
+}
+
+/**
+ * Comments page
+ */
+div#commentWrap {
+    float:              left;
+    width:              68%; 
+    margin:             0 -97% 0 0;
+    background:         white;
+    min-width:          650px;
+}
+
+div.commentTitle {
+    background-color:   red;
+}
+
+div.commentUser {
+    text-align:         left;
+    padding-top:        5px;
+    padding-left:       5px;
+    margin-left:        2px;
+    margin-top:         2px;
+    font-size:          1.2em;
+    float:              left;
+    width:              50%;
+    background-color:   red;
+    height:             25px;
+}
+
+div.commentDate {
+    text-align:         right;
+    padding-top:        5px;
+    padding-right:      10px;
+    margin-left:        -100px;
+    margin-right:       2px;
+    margin-top:         2px;
+    font-weight:        bold;
+    float:              right;
+    width:              50%;
+    background-color:   red;
+    height:             25px;
+}
+
+div.comment {
+    text-align:         left;
+    font-size:          0.9em;
+    clear:              both;
+    padding:            10px;
+    margin-bottom:      25px;
+}
+
+div.commentPostForm {
+    margin-top:         50px;
+    border-top:         1px double black;
+    padding-top:        25px;
+    padding-left:       25px;
+}
+
+/**
+ * Right side stuff.  One box over two columns
+ */
+/* Non content container */
+div.nonContentContainer {
+    float:              right;
+    width:              310px;
+    margin-right:       25px;
+}
+
+/* The Google ad box */
+div.boxAd {
+    float:              right;
+    clear:              both;
+    overflow:           hidden;
+    height:             250px;
+    width:              300px;
+    margin-bottom:      10px;
+    background-color:   white;
+    border:             3px solid #999999;
+}
+
+/* Left sidebar */
+div.sidebar-left {
+    float:              left;
+    margin:             5px 0 0 0;
+    width:              300px;
+    display:            block;
+}
+
+/* Left sidebar cells */
+div.rightContentTitle {
+    width:              100%;
+    text-align:         center;
+    padding:            3px 0 3px 0;
+    border-top:         2px solid #999999;
+    border-left:        2px solid #999999;
+    border-right:       2px solid #999999;
+    font-size:          1.1em;
+    font-weight:        bold;
+    background:         #999999;
+}
+
+div.linkList {
+    width:              100%;
+    border-bottom:      2px solid #999999;
+    border-left:        2px solid #999999;
+    border-right:       2px solid #999999;
+    background-color:   white;
+    padding-top:        5px;
+}
+
+div.linkList li {
+    padding:            2px 0 2px 5px;
+    list-style:         none;
+}
+
+/* Right sidebar */
+div.sidebar-right {
+    float:          right;
+    margin:         5px 0 0 0;
+    width:          130px;
+    display:        block;
+}
+
+/**
+ * Register
+ */
+td.titleRow {
+    font-weight:        bold;
+    padding-bottom:     25px;
+}
+
+td.errorCell {
+    color:              red;
+    padding-left:       5px;
+    padding-top:        8px;
+    padding-bottom:     8px;
+}
+
+td.regTitle {
+    font-size:          .9em;
+    width:              65%;
+    padding-top:        5px;
+    padding-bottom:     5px;
+}
+
+/**
+ * Message
+ */
+div.messageTitle {
+    font-size:          1.2em;
+    padding-left:       5px;
+    padding-top:        5px;
+}
+
+div.message {
+    padding-left:       15px;
+    padding-top:        15px;
+    font-size:          .9em;
+}
+
+div.messageList {
+    padding-left:       10px;
+    padding-top:        5px;
+}
+
+/* Footer */
+div.footer {
+    position:           clear;
+    clear:              both;
+    height:             5em;
+    border-top:         2px solid black;
+    background-color:   white;
+    text-align:         center;
+    vertical-align:     middle;
+}
