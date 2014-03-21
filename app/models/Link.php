@@ -14,4 +14,9 @@ class Link extends Eloquent
     {
         return $this->hasMany('Comment');
     }
+    
+    public function provider()
+    {
+        return $this->belongsTo('Provider');
+    }
 }

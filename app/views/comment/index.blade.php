@@ -1,5 +1,15 @@
 @extends('content-wrapper')
 
+@section('source_list')
+    @foreach ($sources as $source)
+        <li> &raquo; <a target="_blank" 
+                        href="{{ URL::route('show_link', array('id'         => $source->source_id, 
+                                                               'url'        => $source->url,
+                                                               'objectType' => 'source')) }}"
+                     >{{{ $source->name }}}</a>
+    @endforeach
+@stop
+
 @section('content')
   <!-- content, 3-column layout -->      
   <div id="contentContainer">

@@ -1,12 +1,12 @@
 @extends('content-wrapper')
 
 @section('source_list')
-    @foreach ($sources as $source)
+    @foreach ($sources as $rightSource)
         <li> &raquo; <a target="_blank" 
-                        href="{{ URL::route('show_link', array('id'         => $source->source_id, 
-                                                               'url'        => $source->url,
+                        href="{{ URL::route('show_link', array('id'         => $rightSource->source_id, 
+                                                               'url'        => $rightSource->url,
                                                                'objectType' => 'source')) }}"
-                     >{{{ $source->name }}}</a>
+                     >{{{ $rightSource->name }}}</a>
     @endforeach
 @stop
 
@@ -16,7 +16,6 @@
     
     <!-- Left content, links, source, comments -->
     <div id="mainContentWrap">
-        {? $saveDate = 0 ?}
         <table class="feedTable">
       	    <tr><td>
                 <script type="text/javascript"><!--
@@ -31,14 +30,9 @@
                         src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script>
             </td></tr>
-            @foreach ($links as $link)
-                {? $date = date('F j, Y', strtotime($link->publish_date)) ?}
-                @if ($saveDate !== $date)
-                    {? $saveDate = $date ?}
-                    <tr>
-                        <td class="feedTitle">{{ $date }}</td>
-                    </tr>
-                @endif
+            <tr><td class="feedTitle">{{{ $source->name }}}</td></tr>
+            
+            @foreach ($source->links as $link)
                 <tr class="linkRow">
         	        <td>
                         <div style="padding-left: 25px;">
@@ -61,7 +55,7 @@
                             </div>
                         @endif
                         <div style="padding-left: 50px; font-size: .7em;">
-                            {{ date('g:i a', strtotime($link->publish_date)) }}
+                            {{ date('m/d/Y g:i a', strtotime($link->publish_date)) }}
                         </div>
                         <div style="padding-left: 50px; font-size: .8em; padding-bottom: 5px;">
                             <a href="{{ URL::action('CommentController@show', array('id' => $link->link_id)) }}">Comments ({{ $link->comment_count }})</a>

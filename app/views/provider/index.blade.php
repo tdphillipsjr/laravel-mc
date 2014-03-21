@@ -31,14 +31,9 @@
                         src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script>
             </td></tr>
-            @foreach ($links as $link)
-                {? $date = date('F j, Y', strtotime($link->publish_date)) ?}
-                @if ($saveDate !== $date)
-                    {? $saveDate = $date ?}
-                    <tr>
-                        <td class="feedTitle">{{ $date }}</td>
-                    </tr>
-                @endif
+            <tr><td class="feedTitle">{{{ $provider->alias }}}</td></tr>
+            
+            @foreach ($provider->links as $link)
                 <tr class="linkRow">
         	        <td>
                         <div style="padding-left: 25px;">
@@ -61,7 +56,7 @@
                             </div>
                         @endif
                         <div style="padding-left: 50px; font-size: .7em;">
-                            {{ date('g:i a', strtotime($link->publish_date)) }}
+                            {{ date('m/d/Y g:i a', strtotime($link->publish_date)) }}
                         </div>
                         <div style="padding-left: 50px; font-size: .8em; padding-bottom: 5px;">
                             <a href="{{ URL::action('CommentController@show', array('id' => $link->link_id)) }}">Comments ({{ $link->comment_count }})</a>

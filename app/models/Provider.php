@@ -12,6 +12,6 @@ class Provider extends Eloquent
     
     public function links()
     {
-        return $this->hasMany('Link');
+        return $this->hasMany('Link')->orderBy('publish_date', 'desc');
     }
 }

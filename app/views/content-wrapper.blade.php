@@ -1,9 +1,22 @@
 <html>
   <head>
-    <title>Mommy Coach</title>
+    <title>MMA Feed Indexer</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
 
     <!-- Google analytics -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-176025-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     <!-- /google analytics -->
   </head>
   
@@ -13,7 +26,7 @@
 
       <!-- top cell -->
       <div class="topBar">
-        <div class="topBarLeft">Mommy Coach</div>
+        <div class="topBarLeft">MMA News Express</div>
 	    <div class="topBarRight">
 	      @if (Auth::check())
             <div class="loggedInMessage">Welcome, {{{ Auth::user()->username }}}</div>
@@ -47,15 +60,47 @@
         <!-- Right non-content container, links, ads, etc -->
         <div class="nonContentContainer">
           <div class="sidebar-left">
+	        <div class="rightContentTitle">
+	           Ads by Google
+	        </div>
+	        <div class="linkList">
+              <script type="text/javascript">
+                google_ad_client = "ca-pub-7647894115887780";
+                /* MMA1 */
+                google_ad_slot = "3632658157";
+                google_ad_width = 250;
+                google_ad_height = 250;
+              </script>
+              <script type="text/javascript"
+                      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+              </script>
+            </div>
           </div>
         
           <!-- right ad-column on the left side -->
           <div class="sidebar-left">
+            <div class="rightContentTitle">Feeds Indexed</div>
+            <div class="linkList">
+              @yield('source_list')
+            </div>
           </div>
           <!-- /left -->
         
           <!-- Right ad-column on the right side -->
           <div class="sidebar-left">
+  	        <div class="rightContentTitle">Ads by Google</div>
+  	        <div class="linkList">
+                <script type="text/javascript">
+                    google_ad_client = "ca-pub-7647894115887780";
+                    /* MMA3 (link tower) */
+                    google_ad_slot = "9622614373";
+                    google_ad_width = 200;
+                    google_ad_height = 90;
+                </script>
+                <script type="text/javascript"
+                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+            </div>
           </div>
           <!-- /right -->
         </div>
@@ -63,6 +108,7 @@
       </div>
       <!-- /content-->
       <div class="footer">
+        Copyright 2014 - Feed Indexer Express
       </div>
       <!-- /footer -->
     </div>
