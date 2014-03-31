@@ -26,7 +26,6 @@ class CreateSourcesTable extends Migration {
 	    
 	        // The source type refers to the parent website, as one website may have many feeds.
 	        $table->integer('source_type_id')->unsigned();
-	        $table->integer('link_generator_id')->unsigned();
     	    $table->tinyInteger('default_view')->default(1);
 	        $table->tinyInteger('is_error')->default(0);
 	        $table->integer('refer_count')->default(0);
@@ -34,9 +33,6 @@ class CreateSourcesTable extends Migration {
 	        $table->foreign('source_type_id')
 	              ->references('source_type_id')
 	              ->on('source_types');
-            $table->foreign('link_generator_id')
-                  ->references('link_generator_id')
-                  ->on('link_generators');
 	    });
 	}
 

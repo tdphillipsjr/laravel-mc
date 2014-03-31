@@ -19,7 +19,7 @@ class CreateLinksTable extends Migration {
 		    $table->increments('link_id');
 		    $table->string('url');
 		    $table->string('title');
-		    $table->string('provider_id')->unsigned()->nullable();
+		    $table->integer('provider_id')->unsigned()->nullable();
 		    $table->integer('comment_count')->default(0);
 		    $table->integer('source_id')->unsigned();
 		    $table->string('sha_sum');
